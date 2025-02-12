@@ -5,7 +5,9 @@
   "description": "A unit of work that will be triggered as an API call to the OpenMetadata server.",
   "type": "object",
   "javaType": "org.openmetadata.schema.entity.automations.Workflow",
-  "javaInterfaces": ["org.openmetadata.schema.EntityInterface"],
+  "javaInterfaces": [
+    "org.openmetadata.schema.EntityInterface"
+  ],
   "definitions": {
     "workflowType": {
       "javaType": "org.openmetadata.schema.entity.automations.WorkflowType",
@@ -13,14 +15,19 @@
       "type": "string",
       "enum": [
         "TEST_CONNECTION",
-        "CUSTOM"
+        "REVERSE_INGESTION"
       ]
     },
     "workflowStatus": {
       "javaType": "org.openmetadata.schema.entity.automations.WorkflowStatus",
       "description": "Enum defining possible Workflow status",
       "type": "string",
-      "enum": ["Pending", "Successful", "Failed", "Running"]
+      "enum": [
+        "Pending",
+        "Successful",
+        "Failed",
+        "Running"
+      ]
     }
   },
   "properties": {
@@ -48,10 +55,6 @@
       "description": "Type of the workflow.",
       "$ref": "#/definitions/workflowType"
     },
-    "pythonClass": {
-      "description": "Python class to be executed for this workflow (for custom workflows)",
-      "type": "string"
-    },
     "status": {
       "description": "Workflow computation status.",
       "$ref": "#/definitions/workflowStatus",
@@ -64,7 +67,7 @@
           "$ref": "testServiceConnection.json"
         },
         {
-          "$ref": "../../type/basic.json#/definitions/map"
+          "$ref": "../../api/services/ingestionPipelines/createIngestionPipeline.json"
         }
       ]
     },
@@ -75,7 +78,7 @@
           "$ref": "../services/connections/testConnectionResult.json"
         },
         {
-          "$ref": "../../type/basic.json#/definitions/map"
+          "$ref": "../services/ingestionPipelines/reverseIngestionResponse.json"
         }
       ]
     },
@@ -112,13 +115,13 @@
       "type": "boolean",
       "default": false
     },
-    "domain" : {
+    "domain": {
       "description": "Domain the asset belongs to. When not set, the asset inherits the domain from the parent it belongs to.",
       "$ref": "../../type/entityReference.json"
     },
-    "dataProducts" : {
+    "dataProducts": {
       "description": "List of data products this entity is part of.",
-      "$ref" : "../../type/entityReferenceList.json"
+      "$ref": "../../type/entityReferenceList.json"
     }
   },
   "additionalProperties": false,
