@@ -4,7 +4,7 @@
   "title": "Reverse Ingestion Owner Config",
   "type": "object",
   "description": "Configuration for updating owners",
-  "javaType": "org.openmetadata.schema.metadataIngestion.reverseingestionconfig.ownerConfig",
+  "javaType": "org.openmetadata.schema.metadataIngestion.reverseingestionconfig.UpdateOwnerConfig",
   "properties": {
     "removedOwners": {
       "description": "Removed owners from the entity",

@@ -29,7 +29,7 @@
                 "type": {
                     "description": "Type of operation to perform",
                     "type": "string",
-                    "javaType": "org.openmetadata.schema.metadataIngestion.reverseIngestionOperationType",
+                    "javaType": "org.openmetadata.schema.metadataIngestion.ReverseMetadataOperationType",
                     "enum": [
                         "UPDATE_DESCRIPTION",
                         "UPDATE_OWNER",

@@ -4,7 +4,7 @@
   "title": "Reverse Ingestion Description Config",
   "type": "object",
   "description": "Configuration for updating descriptions",
-  "javaType": "org.openmetadata.schema.metadataIngestion.reverseingestionconfig.descriptionConfig",
+  "javaType": "org.openmetadata.schema.metadataIngestion.reverseingestionconfig.UpdateDescriptionConfig",
   "properties": {
     "previousDescription": {
       "description": "Previous description of the service",

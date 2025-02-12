@@ -4,7 +4,7 @@
   "title": "Reverse Ingestion Tags Config",
   "type": "object",
   "description": "Configuration for updating tags",
-  "javaType": "org.openmetadata.schema.metadataIngestion.reverseingestionconfig.tagsConfig",
+  "javaType": "org.openmetadata.schema.metadataIngestion.reverseingestionconfig.UpdateTagsConfig",
   "properties": {
     "removedTags": {
       "description": "Removed tags of the entity",
