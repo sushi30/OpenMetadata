@@ -11,29 +11,19 @@
  *  limitations under the License.
  */
 /**
- * Remove Owner Action Type
+ * Configuration for connecting to Nifi Basic Auth.
  */
-export interface RemoveDescriptionAction {
+export interface BasicAuth {
     /**
-     * Remove descriptions from all the children and parent of the selected assets.
+     * Nifi password to authenticate to the API.
      */
-    applyToAll?: boolean;
+    password?: string;
     /**
-     * Remove descriptions from the children of the selected assets. E.g., columns, tasks, topic
-     * fields,...
+     * Nifi user to authenticate to the API.
      */
-    applyToChildren?: string[];
+    username?: string;
     /**
-     * Application Type
+     * Boolean marking if we need to verify the SSL certs for Nifi. False by default.
      */
-    type: RemoveDescriptionActionType;
-}
-
-/**
- * Application Type
- *
- * Remove Description Action Type
- */
-export enum RemoveDescriptionActionType {
-    RemoveDescriptionAction = "RemoveDescriptionAction",
+    verifySSL?: boolean;
 }

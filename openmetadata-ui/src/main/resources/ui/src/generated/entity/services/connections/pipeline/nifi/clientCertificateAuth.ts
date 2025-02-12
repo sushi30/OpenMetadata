@@ -11,29 +11,19 @@
  *  limitations under the License.
  */
 /**
- * Remove Owner Action Type
+ * Configuration for connecting to Nifi Client Certificate Auth.
  */
-export interface RemoveDescriptionAction {
+export interface ClientCertificateAuth {
     /**
-     * Remove descriptions from all the children and parent of the selected assets.
+     * Path to the root CA certificate
      */
-    applyToAll?: boolean;
+    certificateAuthorityPath?: string;
     /**
-     * Remove descriptions from the children of the selected assets. E.g., columns, tasks, topic
-     * fields,...
+     * Path to the client certificate
      */
-    applyToChildren?: string[];
+    clientCertificatePath?: string;
     /**
-     * Application Type
+     * Path to the client key
      */
-    type: RemoveDescriptionActionType;
-}
-
-/**
- * Application Type
- *
- * Remove Description Action Type
- */
-export enum RemoveDescriptionActionType {
-    RemoveDescriptionAction = "RemoveDescriptionAction",
+    clientkeyPath?: string;
 }
