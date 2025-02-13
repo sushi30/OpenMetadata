@@ -2,7 +2,7 @@
     "$id": "https://open-metadata.org/schema/entity/applications/metadataIngestion/reverseIngestionPipeline.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "reverseIngestionPipeline",
-    "javaType": "org.openmetadata.schema.metadataIngestion.ReverseMetadataOperationRequest",
+    "javaType": "org.openmetadata.schema.apps.reversemetadata.ReverseMetadataRequest",
     "description": "Apply a set of operations on a service",
     "type": "object",
     "definitions": {
@@ -29,7 +29,7 @@
                 "type": {
                     "description": "Type of operation to perform",
                     "type": "string",
-                    "javaType": "org.openmetadata.schema.metadataIngestion.ReverseMetadataOperationType",
+                    "javaType": "org.openmetadata.schema.apps.reversemetadata.OperationType",
                     "enum": [
                         "UPDATE_DESCRIPTION",
                         "UPDATE_OWNER",

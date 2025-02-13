@@ -21,7 +21,7 @@ export interface ReverseIngestionResponse {
     /**
      * List of operations to be performed on the service
      */
-    results: ReverseIngestionOperationResult[];
+    results: OperationResult[];
     /**
      * The id of the service to be modified
      */
@@ -33,7 +33,7 @@ export interface ReverseIngestionResponse {
     success?: boolean;
 }
 
-export interface ReverseIngestionOperationResult {
+export interface OperationResult {
     /**
      * The id of the operation
      */
