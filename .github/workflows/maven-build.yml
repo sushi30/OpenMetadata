@@ -110,10 +110,18 @@ jobs:
           docker compose down --remove-orphans
           sudo rm -rf ${PWD}/docker-volume
 
-      - name: Publish Test Report
+      - name: Publish Backend Test Report
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_test_failures: true
           report_paths: 'openmetadata-service/target/surefire-reports/TEST-*.xml'
+          
+      - name: Publish UI Test Report
+        if: ${{ always() }}
+        uses: scacap/action-surefire-report@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_test_failures: true
+          report_paths: 'openmetadata-ui/target/test-reports/*.xml'
