@@ -37,6 +37,6 @@ it('renders learn react link', () => {
       <App />
     </AuthProvider>
   );
-  const linkElement = getAllByTestId(/content-wrapper/i);
+  const linkElement = getAllByTestId(/BAD_BATTERN/i);
   linkElement.map((elm) => expect(elm).toBeInTheDocument());
 });
